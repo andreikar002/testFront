@@ -1,0 +1,37 @@
+.btn {
+  &, &-mini {
+    border: 0;
+    outline: none;
+    min-width: 237px;
+    height: 75px;
+    padding: 0 45px;
+    border-radius: 35px;
+    font-size: 26px;
+    font-weight: 600;
+    color: white;
+    background: $blue_clr;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition-duration: .25s;
+
+    &:hover, &.light {
+      background: white;
+      color: $blue_clr;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+      transition-duration: .25s;
+    }
+
+    &.light:hover {
+      color: white;
+      background: $blue_clr;
+      transition-duration: .25s;
+    }
+  }
+
+  &-mini {
+    height: 55px;
+    padding: 0 19px;
+    border-radius: 50px;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+
+  &-nav {
+    li {
+      display: inline-block;
+      margin-left: 45px;
+
+      &:first-child {
+        margin: 0;
+      }
+
+      a {
+        height: 75px;
+        line-height: 75px;
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        transition-duration: .25s;
+
+        &.active, &:hover {
+          color: $blue_clr;
+          transition-duration: .25s;
+        }
+
+        &.active {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

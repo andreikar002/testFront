@@ -1,0 +1,46 @@
+@import "colors";
+@import 'fonts.scss';
+@import 'animations.scss';
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+img {
+  user-select: none;
+}
+
+html, body, #__nuxt, #__layout {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: white;
+  overflow-x: hidden;
+}
+
+#__layout {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.main_container {
+  width: 100vw;
+
+  &.bg {
+    background-image: url('/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+.container {
+  width: 1424px;
+  margin: 0 auto;
+}
+@import './components/**/*.scss';
+@import './pages/**/*.scss';

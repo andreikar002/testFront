@@ -1,0 +1,36 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-data {
+    position: relative;
+    z-index: 1;
+    margin-top: 17.6vh;
+
+    &__title {
+      font-size: 40px;
+      line-height: 200%;
+      position: relative;
+
+      svg {
+        width: 350px;
+        height: 100px;
+        position: absolute;
+        bottom: -80px;
+        transform: rotate(-5deg);
+      }
+    }
+
+    &__action {
+      margin-top: 80px;
+    }
+  }
+
+  &-illustration {
+    position: absolute;
+    right: 24px;
+    bottom: -34px;
+    max-height: 84vh;
+  }
+}
