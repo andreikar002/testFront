@@ -96,7 +96,7 @@ export default {
     credentials: false,
     baseURL:
       process.env.NODE_ENV !== 'production'
-        ? 'https://api.gamesense.is/'
+        ? 'http://127.0.0.1:3333/'
         : 'https://api.gamesense.is/',
   },
 

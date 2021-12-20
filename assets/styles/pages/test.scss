@@ -1,0 +1,42 @@
+.test {
+  h2 {
+    margin-top: 11.3vh;
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+
+    li {
+      margin-top: 60px;
+      display: flex;
+      align-items: center;
+
+      p {
+        font-size: 25px;
+      }
+
+      input {
+        width: 24px;
+        height: 24px;
+      }
+
+      p, input {
+        display: inline-block;
+      }
+
+      input {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &-buttons {
+    margin-top: 100px;
+    display: flex;
+    grid-gap: 60px;
+  }
+}

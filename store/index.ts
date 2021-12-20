@@ -19,15 +19,11 @@ export const mutations: MutationTree<RootState> = {
 
 export const actions: ActionTree<RootState, RootState> = {
   async nuxtClientInit({ dispatch }) {
-    await dispatch('auth/update')
-    await dispatch('products/update')
+    // await dispatch('auth/update')
+    // await dispatch('products/update')
   },
   async beforeRoute({ dispatch }, { ctx, to }) {
-    if (to.name === 'payment') {
-      if (!ctx.store.getters['payments/current']) {
-        await dispatch('payments/current', ctx.query.id)
-      }
-    }
+
   },
   /* async nuxtServerInit({ dispatch }) {
     await dispatch('auth/update')

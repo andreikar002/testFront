@@ -4,7 +4,7 @@ import createPersistedState from 'vuex-persistedstate'
 import cookie from 'cookie' */
 export default defineNuxtPlugin((ctx) => {
   createPersistedState({
-    paths: ['auth.token', 'products.items', 'vars.reseller.country'],
+    paths: [],
     storage: {
       getItem: (key) => localStorage.getItem(key),
       setItem: (key, value) => localStorage.setItem(key, value),
