@@ -33,28 +33,46 @@ export default defineComponent({
 
   setup() {
     const store = useStore()
-    
+
     const answers = ref(-1)
     return { answers }
   },
 
+  created() {
+    console.log(this.question)
+  },
+
   methods: {
+    loadAnswers() {
+      const currentAnswer = this.testAnswers.find((item: any) => item.question_id == this.question.id)
+      console.log(currentAnswer, this.testAnswers, this.question)
+      if (currentAnswer)
+        this.answers = this.question.answers.indexOf(currentAnswer);
+    },
+
     nextQuestion() {
-      this.$store.commit('tests/nextQuestion')
       this.$store.commit('tests/addAnswer', this.question.answers[this.answers])
+      this.$store.commit('tests/nextQuestion')
       this.answers = -1
+
+      // this.loadAnswers();
+      console.log(this.testAnswers);
     },
 
     prevQuestion() {
       this.$store.commit('tests/prevQuestion')
       this.answers = -1
+
+      this.loadAnswers();
+      console.log(this.testAnswers);
     }
   },
 
   computed: {
     ...mapGetters({
       test: 'tests/test',
-      question: 'tests/question'
+      testAnswers: 'tests/answers',
+      question: 'tests/question',
     })
   }
 })
