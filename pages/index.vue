@@ -9,7 +9,7 @@
           </h1>
           <IconHomeTitleLine />
         </div>
-        <ButtonMini class="home-data__action">Пройти тест</ButtonMini>
+        <ButtonMini class="home-data__action" @click="redirectToTest">Пройти тест</ButtonMini>
      </div>
      <img src="/home/illustration.png" class="home-illustration" @dragstart="$event.preventDefault()">
   </div>
@@ -22,7 +22,10 @@ import {
 
 export default defineComponent({
   setup() {
-    return { }
+    const redirectToTest = () => {
+      window.location.replace('/test/1');
+    }
+    return { redirectToTest }
   },
 })
 </script>
