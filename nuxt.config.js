@@ -6,7 +6,7 @@ export default {
   target: 'static',
   ssr: false,
   server: {
-    port: 3000, // default: 3000
+    port: 80, // default: 3000
     host: '0.0.0.0', // default: localhost,
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -97,7 +97,7 @@ export default {
     baseURL:
       process.env.NODE_ENV !== 'production'
         ? 'http://127.0.0.1:3333/'
-        : 'https://api.gamesense.is/',
+        : 'http://127.0.0.1:3333/',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
