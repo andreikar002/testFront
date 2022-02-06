@@ -10,6 +10,7 @@
           <IconHomeTitleLine />
         </div>
         <ButtonMini class="home-data__action" @click="redirectToTest">Пройти тест</ButtonMini>
+        <ButtonMini class="home-data__action light" @click="downloadFile" style="margin-left: 10px;">Скачать материал</ButtonMini>
      </div>
      <img src="/home/illustration.png" class="home-illustration" @dragstart="$event.preventDefault()">
   </div>
@@ -25,7 +26,12 @@ export default defineComponent({
     const redirectToTest = () => {
       window.location.replace('/test/1');
     }
-    return { redirectToTest }
+
+    const downloadFile = () => {
+      window.open('/neyroseti_nachalnaya_informatsia.docx', '_blank')
+    }
+
+    return { redirectToTest, downloadFile }
   },
 })
 </script>
