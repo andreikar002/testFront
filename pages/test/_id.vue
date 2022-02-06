@@ -11,7 +11,7 @@
       </li>
     </ul>
     <div class="test-buttons">
-      <ButtonMini @click="prevQuestion">Назад</ButtonMini>
+      <!-- <ButtonMini @click="prevQuestion">Назад</ButtonMini> -->
       <ButtonMini v-if="answers > -1 && test.questions.findIndex(e => e.id == question.id) < test.questions.length - 1" @click="nextQuestion()">Вперед</ButtonMini>
       <ButtonMini @click="endTest">Закончить тестирование</ButtonMini>
     </div>
