@@ -97,7 +97,7 @@ export default {
     baseURL:
       process.env.NODE_ENV !== 'production'
         ? 'http://127.0.0.1:3333/'
-        : 'http://127.0.0.1:3333/',
+        : 'http://94.250.252.194:3333/',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
