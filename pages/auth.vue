@@ -2,6 +2,7 @@
   <div class="register">
     <div class="register-content">
       <h1>Авторизация</h1>
+      <a href="/register">Регистрация</a>
       <p v-if="error" class="error">{{ error }}</p>
       <div class="register-form">
         <input type="email" placeholder="E-mail" v-model="registerData.email">
