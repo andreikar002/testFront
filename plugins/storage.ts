@@ -4,7 +4,7 @@ import createPersistedState from 'vuex-persistedstate'
 import cookie from 'cookie' */
 export default defineNuxtPlugin((ctx) => {
   createPersistedState({
-    paths: [],
+    paths: ['auth.token'],
     storage: {
       getItem: (key) => localStorage.getItem(key),
       setItem: (key, value) => localStorage.setItem(key, value),
@@ -14,6 +14,7 @@ export default defineNuxtPlugin((ctx) => {
   ctx.app.router!.beforeEach(async (to, _, next) => {
     if (!ctx.store.getters.clientInit) {
       await ctx.store.dispatch('nuxtClientInit')
+      await ctx.store.dispatch('auth/update')
       ctx.store.commit('CLIENT_INIT')
     }
     await ctx.store.dispatch('beforeRoute', {

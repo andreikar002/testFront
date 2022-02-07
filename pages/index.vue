@@ -24,7 +24,7 @@ import {
 export default defineComponent({
   setup() {
     const redirectToTest = () => {
-      window.location.replace('/test/1');
+      window.location.replace('/tests');
     }
 
     const downloadFile = () => {
