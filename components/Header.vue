@@ -2,9 +2,10 @@
   <div class="header container">
     <ul class="header-nav">
       <li><a href="" @click="redirectTo($event, 'index')" :class="{ active: $route.name == 'index' }">Главная</a></li>
-      <li><a href="">Учетная карточка</a></li>
-      <li><a href="">Успеваемость</a></li>
-      <li><a href="">Сервисы</a></li>
+      <template v-if="isAuth">
+        <li><a href="/student">Учетная карточка</a></li>
+        <li><a href="/progress">Успеваемость</a></li>
+      </template>
     </ul>
     <Button 
       v-if="!isAuth" 
