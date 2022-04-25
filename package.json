@@ -44,5 +44,17 @@
     "eslint-plugin-vue": "^7.11.1",
     "nuxt-animejs": "^1.2.1",
     "prettier": "^2.3.2"
-  }
+  },
+  "description": "```bash\r # install dependencies\r $ yarn install",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webitp/testing-system-front.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webitp/testing-system-front/issues"
+  },
+  "homepage": "https://github.com/webitp/testing-system-front#readme"
 }
